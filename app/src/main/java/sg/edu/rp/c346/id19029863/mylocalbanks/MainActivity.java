@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.DBSweb)));
                 startActivity(intent);
             } else if (item.getItemId() == 1) {
-                Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + 18001111111L));
+                Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse(getString(R.string.dbsCall)));
                 startActivity(intentCall);
             }else if (item.getItemId() == 2) {
                 if (DBS.getCurrentTextColor() == Color.BLACK) {
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.OCBCweb)));
                 startActivity(intent);
             } else if (item.getItemId() == 1) {
-                Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + 18003633333L));
+                Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse(getString(R.string.ocbcCall)));
                 startActivity(intentCall);
             } else if (item.getItemId() == 2){
                 if(OCBC.getCurrentTextColor() == Color.BLACK){
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.UOBweb)));
                 startActivity(intent);
             } else if (item.getItemId() == 1) {
-                Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + 18002222121L));
+                Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse(getString(R.string.uobCall)));
                 startActivity(intentCall);
             }else if (item.getItemId() == 2){
                 if(UOB.getCurrentTextColor() == Color.BLACK){

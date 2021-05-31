@@ -14,4 +14,7 @@
     <string name="cDBS">星展银行</string>
     <string name="cOCBC">华侨银行</string>
     <string name="cUOB">大华银行</string>
+    <string name="dbsCall">tel: 18001111111</string>
+    <string name="ocbcCall">tel: 18003633333</string>
+    <string name="uobCall">tel: 18002222121</string>
 </resources>

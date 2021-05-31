@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        menu.add(0, 0, 0, "Website");
-        menu.add(0, 1, 1, "Contact");
-        menu.add(0, 2, 2, "Toggle Favourite");
+        menu.add(0, 0, 0, R.string.website);
+        menu.add(0, 1, 1, R.string.contact);
+        menu.add(0, 2, 2, R.string.toggle_favourite);
 
         if (v == DBS){
             wordclicked = "DBS";
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (wordclicked.equalsIgnoreCase("DBS")) {
             if (item.getItemId() == 0) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dbs.com.sg"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.DBSweb)));
                 startActivity(intent);
             } else if (item.getItemId() == 1) {
                 Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + 18001111111L));
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (wordclicked.equalsIgnoreCase("OCBC")) {
             if (item.getItemId() == 0) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ocbc.com.sg"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.OCBCweb)));
                 startActivity(intent);
             } else if (item.getItemId() == 1) {
                 Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + 18003633333L));
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (wordclicked.equalsIgnoreCase("UOB")) {
             if (item.getItemId() == 0) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.uob.com.sg"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.UOBweb)));
                 startActivity(intent);
             } else if (item.getItemId() == 1) {
                 Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + 18002222121L));
@@ -115,15 +115,15 @@ public class MainActivity extends AppCompatActivity {
             int id = item.getItemId();
             if (id == R.id.EnglishSelection) {
                 Toast.makeText(MainActivity.this, "English is chosen", Toast.LENGTH_SHORT).show();
-                DBS.setText("DBS");
-                OCBC.setText("OCBC");
-                UOB.setText("UOB");
+                DBS.setText(R.string.dbs);
+                OCBC.setText(R.string.ocbc);
+                UOB.setText(R.string.uob);
                 return true;
             } else if (id == R.id.ChineseSelection) {
                 Toast.makeText(MainActivity.this, "切换中文模式", Toast.LENGTH_SHORT).show();
-                DBS.setText("星展银行");
-                OCBC.setText("华侨银行");
-                UOB.setText("大华银行");
+                DBS.setText(R.string.cDBS);
+                OCBC.setText(R.string.cOCBC);
+                UOB.setText(R.string.cUOB);
                 return true;
             } else {
                 Toast.makeText(MainActivity.this, "Error Translation", Toast.LENGTH_SHORT).show();

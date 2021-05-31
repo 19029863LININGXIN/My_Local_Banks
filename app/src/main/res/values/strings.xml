@@ -7,7 +7,11 @@
     <string name="chinese">中文</string>
     <string name="website">Website</string>
     <string name="contact">Contact</string>
-    <string name="website2">网址</string>
-    <string name="contact2">联系方式</string>
     <string name="toggle_favourite">Toggle Favourite</string>
+    <string name="DBSweb">https://www.dbs.com.sg</string>
+    <string name="OCBCweb">https://www.ocbc.com.sg</string>
+    <string name="UOBweb">https://www.uob.com.sg</string>
+    <string name="cDBS">星展银行</string>
+    <string name="cOCBC">华侨银行</string>
+    <string name="cUOB">大华银行</string>
 </resources>
